@@ -1,0 +1,48 @@
+---
+layout: default
+title: Home
+---
+<section class="linha">
+    <article class="kalel-2-6 grupos">
+      <h1 class="davi-title">Grupos</h1>
+      <hr class="baixo-15">
+      <ul>
+       {% for grupo in site.posts %}
+        {% if grupo.grupo =='ok' %}
+        <li><a href="{{ grupo.url | prepend: site.baseurl }}"><span>{{ grupo.title }}</span><span>></span></a></li>
+        {% endif %}
+       {% endfor %}
+      </ul>
+    </article>
+    <article class="kalel-4-6 block-post">
+      <h1 class="davi-title">Noticias</h1>
+      <hr class="baixo-15">
+     {% for poste in paginator.posts %}
+      {% if poste.grupo == 'ok' %}
+     
+      {% else %}
+      <div class="posts baixo-20">
+       <article class="link-sem-traco">
+         <h1 class="post-title texto-esquerda"><a href="{{ poste.url | prepend: site.baseurl }}">{{ poste.title }}</a></h1>
+          {% if poste.descricao %}
+           {{ poste.descricao }} 
+          {% else %}
+           {{ poste.excerpt }}
+          {% endif %}
+       </article>
+       <div class="responsivo-centro">
+         <button class="bt bt-davi">+</button>
+       </div>
+      </div>
+      {%endif%}
+     {% endfor %}
+   </article>
+  </section>
+<hr>
+  <section class="kalel-1-1 parceiros texto-centro responsivo link-sem-traco">
+    <h1 class="davi-title">Agradecemos aos Nossos Parceiros</h1>
+   <div class="kalel-1-6 pular-1-6 responsivo-medio"><a href="" target="new"><img class="img-responsiva img-circular" src="img/antigueira2.jpg"></a></div>
+   <div class="kalel-1-6 responsivo-medio"><a href="" target="new"><img class="img-responsiva img-circular" src="img/tofly.png"></a></div>   
+   <div class="kalel-1-6 responsivo-medio"><a href="" target="new"><img class="img-responsiva img-circular" src="img/web-tips.png"></a></div>   
+   <div class="kalel-1-6 responsivo-medio"><a href="" target="new"><img class="img-responsiva img-circular" src="img/supremo.jpg"></a></div>   
+   </section>

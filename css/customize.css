@@ -1,0 +1,204 @@
+.kalel-topo-fixo {
+  background: rgba(36, 36, 36, 0.4); }
+
+.kalel-topo-fixo a {
+  color: white; }
+
+.kalel-topo-fixo a:hover {
+  color: tomato; }
+
+.banner {
+  min-height: 65%;
+  /*background: #0078cc;*/
+  background: url('../img/music.jpg') fixed;
+  background-size: cover;
+  border-bottom: 15px solid rgba(40, 40, 40, 0.5); 
+  padding-top: 100px;
+   color: white;}
+
+.davi-title {
+  font-size: 2.5em; }
+
+.bloco-posts, .grupos{
+  float: right !important; 
+}
+
+/*
+  posts
+*/
+
+.posts {
+  width: 98%;
+  margin-left: 2%;
+  font-size: 1.15em;
+  display: inline-block;
+  border-radius: 0.2em; }
+
+.posts article, .posts aside {
+  float: left; }
+
+.posts article {
+  text-align: justify;
+  height: 140px;
+  margin-bottom: 5px;
+  width: 88.5%;
+  margin-left: 1%;
+  border-right: 0.1em solid #ccc; 
+  overflow: hidden;}
+
+.posts article h1 {
+  font-size: 2.3em; }
+
+.posts aside {
+  width: 10%;
+  line-height: 140px;
+  text-align: center; }
+
+.posts aside a {
+  color: white;
+  display: block;
+  font-size: 5em;
+  text-decoration: none;
+  background: rgba(0, 120, 255, .9); }
+
+.rodape, .posts aside a, .grupos ul li a span:nth-child(2){
+  background: rgba(0, 120, 255, .9);
+  color:white;
+}
+
+.posts aside a:hover, .grupos ul li a:hover span:nth-child(2) {
+   background: rgba(0, 120, 255, .7); }
+
+.grupos, .grupos ul, .grupos ul li {
+  padding: 0; }
+
+.grupos ul{
+  margin: 0;}
+
+.grupos ul li {
+  width: 80%;
+  margin-left: 10%;
+  list-style: none;
+  margin-top: 1px;
+  vertical-align: middle;}
+
+.grupos ul li:hover{
+  background: rgba(36, 36, 36, .1);
+}
+
+.grupos ul li a {
+  line-height: 35px;
+  width: 100%;
+  display: inline-block;
+  text-decoration: none; }
+
+
+.grupos ul li a span {
+  display: block;
+  float: left; }
+
+.grupos ul li a span:nth-child(1) {
+    width: 79%;
+    margin-left: 1%;
+    font-size: 1.3em; 
+    text-align: left;}
+
+.grupos ul li a span:nth-child(2) {
+    font-size: 2em;
+    text-align: center;
+    width: 20%;}
+
+/*
+  contatos
+*/
+
+.tel-grupo{
+  border-bottom: 5px solid #0078cc;
+}
+
+.tel-grupo ul{
+  padding: 0;
+}
+
+.tel-grupo ul li{
+  list-style: none;
+  font-size: 1.3em;
+}
+
+/*
+ parceiros
+*/
+
+.parceiros{
+  margin-top: 70px;
+}
+
+.parceiros div{
+  margin-top: 40px;
+}
+
+
+.parceiros img{
+  max-width: 75%;
+  border: .1em solid #eee;
+}
+
+@media screen and (max-width: 930px) {
+  .block-post, .contatos, .endereco{
+    width: 90%;
+    margin-left: 5%; }
+
+  .posts {
+    margin: 0; } 
+ 
+  .bloco-posts, .grupos{
+      float: left !important; }
+
+  .grupos{
+      width: 80%;
+      margin-left: 10% !important; }
+  
+  .grupos ul li, .grupos ul li a{
+    line-height: 50px;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .grupos ul li a{
+      vertical-align: middle;
+  }
+  
+  
+
+}
+@media screen and (max-width: 655px) {
+  
+  .publica{
+    width: 90%;
+    margin-left: 5%;
+  }
+ 
+  .block-post, .grupos, .grupos ul li, .contatos, .endereco {
+    width: 100%;
+    margin-left: 0% !important; }
+
+  .posts article {
+    width: 78%; }
+
+  .posts aside {
+    width: 20%; } 
+  
+ .parceiros img{
+    max-width: 50% !important;
+  }
+ 
+}
+
+@media screen and (max-width: 420px){
+ 
+ .parceiros img{
+    max-width: 80% !important;
+  }
+ 
+}
+/*# sourceMappingURL=custom.css.map */
