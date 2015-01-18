@@ -30,8 +30,8 @@ title: Home
            {{ poste.excerpt }}
           {% endif %}
        </article>
-       <div class="responsivo-centro">
-         <button class="bt bt-davi">+</button>
+       <div class="responsivo-centro link-sem-traco">
+         <a href="{{ poste.url | prepend: site.baseurl }}"><button class="bt bt-davi">+</button></a>
        </div>
       </div>
       {%endif%}
