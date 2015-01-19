@@ -31,18 +31,32 @@ title: Home
           {% endif %}
        </article>
        <div class="responsivo-centro link-sem-traco">
-         <a href="{{ poste.url | prepend: site.baseurl }}"><button class="bt bt-davi">+</button></a>
+        <a href="{{ poste.url | prepend: site.baseurl }}"><button class="bt bt-davi">+</button></a>
        </div>
       </div>
       {%endif%}
      {% endfor %}
    </article>
+   <div class="kalel-4-6 responsivo paginacao link-sem-traco">
+      {% if paginator.total_pages > 1%}
+        <aside class="kalel-1-2 texto-esquerda">
+        {% if paginator.previous_page%}
+        <a href="{{ paginator.previous_page_path | prepend: site.url | replace: '//','/' }}"><button class="bt bt-davi">-</button></a>
+        {% endif %}
+        </aside>
+        <aside class="kalel-1-2 texto-direita">
+        {% if paginator.next_page%}
+        <a href="{{ paginator.next_page_path | prepend: site.url | replace: '//','/' }}"><button class="bt bt-davi">+</button></a>
+        {% endif %}
+        </aside>
+      {% endif %}
+   </div>
   </section>
 <hr>
   <section class="kalel-1-1 parceiros texto-centro responsivo link-sem-traco">
     <h1 class="davi-title">Agradecemos aos Nossos Parceiros</h1>
-   <div class="kalel-1-6 pular-1-6 responsivo-medio"><a href="" target="new"><img class="img-responsiva img-circular" src="img/antigueira2.jpg"></a></div>
-   <div class="kalel-1-6 responsivo-medio"><a href="" target="new"><img class="img-responsiva img-circular" src="img/tofly.png"></a></div>   
-   <div class="kalel-1-6 responsivo-medio"><a href="" target="new"><img class="img-responsiva img-circular" src="img/web-tips.png"></a></div>   
-   <div class="kalel-1-6 responsivo-medio"><a href="" target="new"><img class="img-responsiva img-circular" src="img/supremo.jpg"></a></div>   
+   <div class="kalel-1-6 pular-1-6 responsivo-medio"><a href="" target="new"><img class="img-responsiva img-circular" src="{{ site.url }}/img/antigueira2.jpg"></a></div>
+   <div class="kalel-1-6 responsivo-medio"><a href="" target="new"><img class="img-responsiva img-circular" src="{{ site.url }}/img/tofly.png"></a></div>   
+   <div class="kalel-1-6 responsivo-medio"><a href="" target="new"><img class="img-responsiva img-circular" src="{{ site.url }}/img/web-tips.png"></a></div>   
+   <div class="kalel-1-6 responsivo-medio"><a href="" target="new"><img class="img-responsiva img-circular" src="{{ site.url }}/img/supremo.jpg"></a></div>   
    </section>

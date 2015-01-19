@@ -1,0 +1,35 @@
+{% include head.html%}
+{% include header.html%}
+  <section class="linha">
+  		<article class="kalel page-grupo">
+     {% if page.img-grande %}
+  			<div class="kalel-1-1">
+  				<img src="{{ site.url }}/{{page.img-grande }}">  	
+  			</div>
+     {% endif %}
+  			<aside class="kalel-1-3 responsivo-medio">{% if page.min-left %}<img src="{{site.url}}/{{page.min-left}}">{% endif %}</aside>
+  			<aside class="kalel-1-3 responsivo-medio">{% if page.min-center %}<img src="{{site.url}}/{{page.min-center}}">{% endif %}</aside>
+  			<aside class="kalel-1-3 responsivo-medio-centro">{% if page.min-right %}<img src="{{site.url}}/{{page.min-right}}">{% endif %}</aside>
+  			<blockquote class="kalel-1-1 topo-20">
+  				<h1 class="davi-title texto-centro">{{page.title}}</h1>
+  				<hr>
+  				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  			</blockquote>
+  		</article>
+   <article class="kalel-4-5-centro post-relacionado link-sem-traco topo-20">
+     <h1 class="davi-title">Publicões Relacionadas:</h1>
+      {% for relato in site.related_posts %}
+        {% if relato.grupo == 'ok' %}
+        <div>
+          <a href="{{ relato.url | prepend: site.baseurl }}">{{ relato.title }}</a>
+        </div>
+        {% endif %}
+      {% endfor %}
+   </article>
+  </section>
+{% include footer.html %}

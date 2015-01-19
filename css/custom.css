@@ -8,13 +8,15 @@
   color: tomato; }
 
 .banner {
-  min-height: 65%;
+  width: 100%;
+  min-height: 45%;
   height: auto;
   max-height: 100%;
-  /*display: inline-block;background: #0078cc;*/
+  display: inline-block;
+  background: #0078cc;
   background: url('../img/music.jpg') fixed;
   background-size: cover;
-  border-bottom: 15px solid rgba(0, 120, 255, 0.7); 
+  border-bottom: 15px solid rgba(36, 36, 36, 0.85);
   padding-top: 100px;
   color: white;}
 
@@ -100,7 +102,8 @@
 .grupos ul li a span:nth-child(2) {
     font-size: 2em;
     text-align: center;
-    width: 20%;}
+    width: 20%;
+    margin-top: 2px;}
 
 .bt-davi:hover, .grupos ul li a:hover span:nth-child(2) {
    background: rgba(0, 120, 255, .7); }
@@ -146,7 +149,72 @@
   border: .1em solid #eee;
 }
 
+/*
+  page grupo
+*/
+
+.page-grupo div, .page-grupo aside{
+    text-align: center;
+}
+
+.page-grupo div{
+  height: 300px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.page-grupo img{
+    max-width: 80%;
+}
+
+.post-relacionado{
+  margin-top: 50px;
+}
+
+.post-relacionado h1{
+  margin-bottom: 30px;
+}
+
+.post-relacionado div{
+ line-height: 100px;
+ float: left;
+ min-width: 15%;
+ width: auto;
+ max-width: 100%;
+ margin-left: 4%;
+ text-align: center;
+}
+
+.post-relacionado a{
+ color: #333;
+ margin-top: 10px;
+ display: block;
+ width: 100%;
+ background: rgba(0, 120, 255, .2);
+ font-size: 1.5em;
+ padding-left: 4%;
+ padding-right: 4%;
+ border: 5px solid rgba(0, 120, 255, .3);
+}
+
+.post-relacionado a:hover{
+  background: rgba(0, 120, 255, .4);
+  border: 5px solid rgba(0, 120, 255, .5);
+  color: white;
+}
+
+
+.paginacao .bt{
+  min-width: 25%;
+}
+
+
 @media screen and (max-width: 930px) {
+   
+   .post-relacionado div{
+      min-width: 20%;
+   }
+ 
   .block-post, .contatos, .endereco{
     width: 90%;
     margin-left: 5%; }
@@ -169,16 +237,24 @@
 
   .grupos ul li a{
       vertical-align: middle;
-  }
-  
-  
+  } 
 
 }
-@media screen and (max-width: 655px) {
+
+@media screen and (max-width: 740px){
    
+ .post-relacionado div{
+   margin-left: 6%;
+ }
+}
+
+@media screen and (max-width: 655px) {
+   .page-grupo div{
+    height: auto;
+   }
+
   .banner{
-    background: #0078cc;
-    border-color: rgba(36, 36, 36, 0.7);
+    /*background: #0078cc;*/
   }
  
   .banner .img-responsiva{

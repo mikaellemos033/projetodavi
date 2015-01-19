@@ -2,8 +2,26 @@
 {% include header.html%}
 
 <article class="kalel-2-3-centro topo-35 publica texto-justificado">
+ {% if page.img-grande %}
+  			<div class="kalel-1-1">
+  				<img src="{{ site.url }}/{{page.img-grande }}">  	
+  			</div>
+ {% endif %}
  <h1 class="texto-centro davi-title baixo-20">{{page.title}}</h1>
  <p class="texto-centro baixo-20">{% if page.date %}{{ page.date | date: "%b %-d, %Y" }}{% endif %}</p>
  {{content}}
+</article>
+<article class="kalel-4-5-centro post-relacionado link-sem-traco">
+ <h1 class="davi-title">Publicões Relacionadas:</h1>
+{% for relato in site.related_posts %}
+ {% if relato.grupo == 'ok' %}
+ 
+ {% else %}
+<div>
+  <a href="{{ relato.url | prepend: site.baseurl }}">{{ relato.title }}</a>
+</div>
+ {% endif %}
+{% endfor %}
+ 
 </article>
 {% include footer.html%}
